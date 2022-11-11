@@ -5,6 +5,7 @@ body{
     padding:0;
     width:100%;
     height:100%;
+    line-height:1.5;
     background:url(background.jpg);
     background-repeat:no-repeat;
     background-size:cover;
@@ -32,20 +33,18 @@ nav{
     position:sticky;
     top:0;
     margin:0;
-    /*display:table;*/
     width:100%;
+    font-size:1em;
     border-bottom:1px solid hsl(260,11%,40%);
     z-index:2;
 }
 .navigationmenu{
     text-align:center;
-    height:30px;
+    height:3em;
     margin:0;
+    font-size:1em;
     padding-left:0;
     padding-right:0;
-    display:flex;
-    /*padding-top:5px;
-    padding-bottom:5px;*/
 }
 .navlogo, .navbutton{
     display:inline-block;
@@ -63,9 +62,15 @@ nav{
     padding-top:5px;
     padding-bottom:5px;
     list-style:none;
+    font-size:1em;
+    outline:1px solid hsl(260,11%,40%);
 }
 .navbutton{
+    display:inline-block;
     width:250px;
+    height:3em;
+    padding:0;
+    position: relative;
 }
 .navbutton:hover, .navbutton:hover .dropbutton:hover{
     background-color:rgb(55,45,96);
@@ -74,13 +79,22 @@ nav{
     text-decoration:none;
     display:block;
     color:white;
+    width:100%;
+    position: absolute;
+    font-size:20px;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Drop down */
 
 .dropdown{
     display:none;
-    position:absolute;
+    position:relative;
+    top:3em;
+    margin:0;
     z-index:3;
 }
 .navbutton:hover .dropdown{
@@ -90,11 +104,12 @@ nav{
     display:block;
 }
 .dropbutton{
-    margin-left:30px;
-    margin-top:6px;
-    margin-bottom:-6px;
-    width:110px;
-    border:1px solid hsl(260,11%,40%);
+    margin-left:-40px;
+    margin-top:1px;
+    margin-bottom:1px;
+    width:250px;
+    height:1em;
+    position:relative;
 }
 
 /* Side elements */
@@ -109,6 +124,7 @@ nav{
     border-right:1px solid hsl(260,11%,40%);
 }
 .asidetitle{
+    padding:.6em;
     padding-left:5px;
 }
 .asideright{
@@ -177,7 +193,6 @@ nav{
     margin-bottom:5px;
 }
 .articleimage{
-    /*float:right;*/
 }
 
 /* Tables */
@@ -187,6 +202,8 @@ nav{
 }
 table{
     display:inline-block;
+    border-collapse:collapse;
+    outline:3px double hsl(260,11%,90%);
 }
 th{
     border:1px solid hsl(260,11%,90%);
