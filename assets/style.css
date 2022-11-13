@@ -27,6 +27,21 @@ body{
     background-color:hsl(260,11%,30%);
 }
 
+/* Hyperlinks */
+
+a{
+    text-decoration: none;
+}
+a:link{
+    color:lightskyblue;
+}
+a:visited{
+    color:mediumpurple;
+}
+.readmore{
+    margin-left:2em;
+}
+
 /* Navigation */
 
 nav{
@@ -78,7 +93,7 @@ nav{
 .navlink{
     text-decoration:none;
     display:block;
-    color:white;
+    color:white !important;
     width:100%;
     position: absolute;
     font-size:20px;
@@ -210,6 +225,7 @@ th{
     padding-left:4px;
     padding-right:4px;
 }
+
 /* Footer */
 
 footer{
