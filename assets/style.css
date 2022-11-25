@@ -179,22 +179,30 @@ nav{
         display:none;
         width:50%;
     }
+    .asidetitle{
+        font-size:12px;
+    }
 }
 @media only screen and (min-width:560px) and (max-width:1200px){
     .asideleft{
         display:fixed;
-        width:10%;
+        width:20%;
     }
-
+    .asidetitle{
+        font-size:16px;
+    }
 }
 @media only screen and (min-width:1200px){
     .asideleft{
         display:fixed;
         width:10%;
     }
-
+    .asidetitle{
+        font-size:20px;
+    }
+    .toc{
+    }
 }
-
 .asideleft{
     position:fixed;
     float:left;
@@ -220,8 +228,51 @@ nav{
 
 /* Main content */
 
+@media only screen and (max-width:560px){
+    .bigpageheader, .smallpageheader{
+        margin:auto;
+        width:80%;
+    }
+    .maincontent p, .maincontent ol, .maincontent ul, .maincontent h2, .maincontent h3{
+        margin:auto;
+        width:90%;
+    }
+    .maincontent .captionbox{
+        margin-right:5%;
+        margin-left:5%;
+    }
+    .wrapper{
+        margin:auto;
+        width:90%;
+    }
+    table{
+        font-size:10px;
+    }
+}
+@media only screen and (min-width:560px) and (max-width:1200px){
+    .bigpageheader, .smallpageheader, .maincontent{
+        padding-left:21%;
+    }
+    .maincontent{
+        padding-right:5%;
+        padding-left:25%;
+    }
+    table{
+        display:inline-block;
+    }
+}
+@media only screen and (min-width:1200px){
+    .bigpageheader, .smallpageheader, .maincontent{
+        padding-left:11%;
+    }
+    .maincontent{
+        padding-right:20%;
+    }
+    table{
+        display:inline-block;
+    }
+}
 .bigpageheader, .smallpageheader, .maincontent{
-    padding-left:11%;
     color:white;
 }
 .bigpageheader{
@@ -232,7 +283,6 @@ nav{
     font-size:26px;
 }
 .maincontent{
-    padding-right:20%;
     padding-top:5px;
     padding-bottom:5px;
     border-top:1px solid hsl(260,11%,40%);
@@ -273,7 +323,7 @@ nav{
     margin-top:0;
     margin-bottom:5px;
 }
-.articleimage{
+.articleimage, .articlevideo{
     margin:1px;
 }
 
@@ -283,7 +333,6 @@ nav{
     margin:auto;
 }
 table{
-    display:inline-block;
     border-collapse:collapse;
     outline:3px double hsl(260,11%,90%);
 }
