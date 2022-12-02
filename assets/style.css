@@ -236,6 +236,8 @@ nav{
     .maincontent p, .maincontent ol, .maincontent ul, .maincontent h2, .maincontent h3{
         margin:auto;
         width:90%;
+        margin-top:5px;
+        margin-bottom:5px;
     }
     .maincontent .captionbox{
         margin-right:5%;
@@ -344,6 +346,21 @@ th{
 
 /* Footer */
 
+@media only screen and (max-width:560px){
+    footer p{
+        margin-left:0.5%;
+    }
+}
+@media only screen and (min-width:560px) and (max-width:1200px){
+    footer p{
+        margin-left:20.5%;
+    }
+}
+@media only screen and (min-width:1200px){
+    footer p{
+        margin-left:10.5%;
+    }
+}
 footer{
     position:absolute;
     margin-top:400px;
@@ -351,7 +368,4 @@ footer{
     display:table;
     width:100%;
     border-top:1px solid hsl(260,11%,40%);
-}
-footer p{
-    margin-left:10.5%;
 }
