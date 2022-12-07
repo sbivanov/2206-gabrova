@@ -1,5 +1,4 @@
 
-
 @font-face {
     font-family:"Aleo";
     src:url(fonts/Aleo-Regular.otf);
@@ -24,7 +23,7 @@ body{
 
 /* Colors of elements */
 
-.navigationmenu, .asideleft{
+.navigationmenu, .asideleft, .mapdiv{
     background-color:hsl(260,11%,10%);
 }
 .navbutton, .navbutton:hover .dropbutton, .asidetitle, .toc, .maincontent, footer{
@@ -244,7 +243,7 @@ nav{
     .bigpageheader{
         margin-top:1em;
     }
-    .maincontent p, .maincontent ol, .maincontent ul, .maincontent h2, .maincontent h3, .maincontent h4{
+    .maincontent p, .maincontent ol, .maincontent ul, .maincontent h2, .maincontent h3, .maincontent h4, .mapdiv{
         margin:auto;
         width:90%;
         margin-top:5px;
@@ -266,7 +265,7 @@ nav{
     .maincolumn{
         width:80%;
     }
-    .maincontent p, .maincontent ol, .maincontent ul, .maincontent h2, .maincontent h3, .maincontent h4{
+    .maincontent p, .maincontent ol, .maincontent ul, .maincontent h2, .maincontent h3, .maincontent h4, .mapdiv{
         margin-right:2.5%;
         margin-left:2.5%;
     }
@@ -285,7 +284,7 @@ nav{
         /*padding-left:11%;*/
         width:90%;
     }
-    .maincontent p, .maincontent ol, .maincontent ul, .maincontent h2, .maincontent h3, .maincontent h4{
+    .maincontent p, .maincontent ol, .maincontent ul, .maincontent h2, .maincontent h3, .maincontent h4, .mapdiv{
         margin-right:5%;
         margin-left:5%;
     }
@@ -332,6 +331,19 @@ nav{
 
 /* Images */
 
+@media only screen and (max-width:560px){
+    .imgwrapper{
+        margin:auto;
+    }
+}
+.imgwrapper{
+    margin-left:5%;
+    border-left:1px solid hsl(260,11%,90%);
+}
+.mapdiv{
+    overflow:scroll;
+    outline:3px double hsl(260,11%,90%);
+}
 .captionbox{
     display:inline-block;
     justify-content:center;
