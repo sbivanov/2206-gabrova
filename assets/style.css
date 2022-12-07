@@ -1,4 +1,11 @@
 
+
+@font-face {
+    font-family:"Aleo";
+    src:url(fonts/Aleo-Regular.otf);
+    font-style:normal;
+}
+
 body{
     margin:0;
     padding:0;
@@ -11,7 +18,7 @@ body{
     background-attachment:fixed;
     color:white;
     word-wrap: break-word;
-    font-family:"Ubuntu", sans-serif;
+    font-family:"Aleo";
     box-sizing:border-box;
 }
 
@@ -260,8 +267,14 @@ nav{
         width:80%;
     }
     .maincontent p, .maincontent ol, .maincontent ul, .maincontent h2, .maincontent h3, .maincontent h4{
-        margin-right:5%;
-        margin-left:20px;
+        margin-right:2.5%;
+        margin-left:2.5%;
+    }
+    .captionbox{
+        margin-right:2.5% !important;
+    }
+    .center{
+        margin-left:2.5% !important;
     }
     table{
         display:inline-block;
@@ -273,11 +286,14 @@ nav{
         width:90%;
     }
     .maincontent p, .maincontent ol, .maincontent ul, .maincontent h2, .maincontent h3, .maincontent h4{
-        margin-right:15%;
-        margin-left:20px;
+        margin-right:5%;
+        margin-left:5%;
     }
     .captionbox{
-        margin-right:15% !important;
+        margin-right:5% !important;
+    }
+    .center{
+        margin-left:5% !important;
     }
     table{
         display:inline-block;
