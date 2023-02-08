@@ -1,0 +1,12 @@
+- name: Planets
+  link: planet
+- name: Moons
+  link: natural-satellite
+- name: Asteroid belt
+  link: asteroid-belt
+- name: TNOs
+  link: tno
+- name: Exoplanets
+  link: exoplanet
+- name: Stars
+  link: star

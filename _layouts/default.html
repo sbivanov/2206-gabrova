@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="stylesheet" href="{% if page.dir == "/pages/" %}../{% endif %}assets/style.css">
+        <link rel="icon" type="image/x-icon" href="{% if page.dir == "/pages/" %}../{% endif %}assets/favicon.png">
+        <title>{{ page.title }}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Geography of the planets">
+        <meta name="keywords" content="gabrova, asteroid, space, solar system, planet, exoplanet, moon, dwarf planet, geography">
+    </head>
+    <body>
+
+        <!--The navigation menu-->
+
+        <nav>
+            <ul class="navigationmenu">
+                <li class=navlogo>
+                    <img src="{% if page.dir == "/pages/" %}../{% endif %}assets/logo.png" alt="LOGO">
+                </li>
+                <li class="navbutton">
+                    <a class="navlink" href="{% if page.dir == "/pages/" %}../{% endif %}index.html">Home</a>
+                </li>
+                <li class="navbutton">
+                    <p class="navlink">Articles</p>
+                    <div class="dropdown">
+                        <ul>
+                            {% for item in site.data.navigation %}
+                            <li class="dropbutton">
+                                <a class="navlink" href="{% if page.dir != "/pages/" %}pages/{% endif %}{{ item.link }}.html">{{ item.name }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </li>
+                <li class="navbutton">
+                    <a class="navlink" href="{% if page.dir == "/pages/" %}../{% endif %}about.html">About</a>
+                </li>
+                <li class="navbutton">
+                    <a class="navlink" href="{% if page.dir == "/pages/" %}../{% endif %}news.html">News</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--The side panels-->
+
+        <aside class="asideleft">
+            <h2 class="asidetitle">Home</h2>
+            <ul class="toc">
+                {% include toc{{page.link}}.html %}
+            </ul>
+        </aside>
+
+        <!--Title on the main page-->
+
+        <div class="maincolumn">
+            <h1 class="bigpageheader">{{ page.articlename }}</h1>
+            {% if page.url == "/" %}<h2 class="smallpageheader">Astronomy and geography of the planets</h2>{% endif %}
+         
+            <!--The main page article-->
+         
+            <section class="maincontent">
+                {{ content }}
+            </section>
+        </div>
+
+        <!--A footer-->
+        
+        <footer>
+            <p>Gabrova</p>
+        </footer>
+    </body>
+</html>
