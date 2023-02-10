@@ -71,7 +71,7 @@ a:visited{
         top:2em;
     }
 }
-@media only screen and (min-width:560px) and (max-width:1200px){
+@media only screen and (min-width:561px) and (max-width:1200px){
     /* Medium size */
     .navigationmenu, .navbutton{
         height:2.5em;
@@ -86,7 +86,7 @@ a:visited{
         top:2.5em;
     }
 }
-@media only screen and (min-width:1200px){
+@media only screen and (min-width:1201px){
     /* Desktop */
     .navigationmenu, .navbutton{
         height:3em;
@@ -191,7 +191,7 @@ nav{
         font-size:12px;
     }
 }
-@media only screen and (min-width:560px) and (max-width:1200px){
+@media only screen and (min-width:561px) and (max-width:1200px){
     .asideleft{
         width:20%;
         padding-top:2.5em;
@@ -201,7 +201,7 @@ nav{
         font-size:16px;
     }
 }
-@media only screen and (min-width:1200px){
+@media only screen and (min-width:1201px){
     .asideleft{
         width:10%;
         padding-top:3em;
@@ -261,7 +261,7 @@ nav{
         font-size:10px;
     }
 }
-@media only screen and (min-width:560px) and (max-width:1200px){
+@media only screen and (min-width:561px) and (max-width:1200px){
     .maincolumn{
         width:80%;
     }
@@ -279,7 +279,7 @@ nav{
         display:inline-block;
     }
 }
-@media only screen and (min-width:1200px){
+@media only screen and (min-width:1201px){
     .maincolumn{
         /*padding-left:11%;*/
         width:90%;
