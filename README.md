@@ -1,1 +1,1 @@
-https://chicheka.github.io/2206-gabrova/
+https://sbivanov.github.io/2206-gabrova/
