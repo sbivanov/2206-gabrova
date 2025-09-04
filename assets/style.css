@@ -82,7 +82,11 @@ a[href='sedna.html'],
 a[href='orcus.html'],
 a[href='asteroid.html'],
 a[href='vesta.html'],
-a[href='comet.html']{
+a[href='comet.html'],
+a[href='centaur.html'],
+a[href='hyperion.html'],
+a[href='proteus.html'],
+a[href='trojan.html']{
     color:lightsalmon;
 }
 .readmore{
@@ -375,7 +379,7 @@ nav{
     margin-left:5%;
     border-left:1px solid hsl(260,11%,90%);
 }
-.mapdiv{
+.captionbox .imgwrapper{
     overflow:scroll;
     outline:3px double hsl(260,11%,90%);
 }
