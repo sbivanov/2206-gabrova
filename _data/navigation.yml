@@ -2,8 +2,8 @@
   link: planet
 - name: Moons
   link: natural-satellite
-- name: Asteroid belt
-  link: asteroid-belt
+- name: Asteroids
+  link: asteroid
 - name: TNOs
   link: tno
 - name: Exoplanets

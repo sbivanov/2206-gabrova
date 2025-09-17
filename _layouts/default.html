@@ -33,19 +33,13 @@
                         </ul>
                     </div>
                 </li>
-                <li class="navbutton">
-                    <a class="navlink" href="{% if page.dir == "/pages/" %}../{% endif %}about.html">About</a>
-                </li>
-                <li class="navbutton">
-                    <a class="navlink" href="{% if page.dir == "/pages/" %}../{% endif %}news.html">News</a>
-                </li>
             </ul>
         </nav>
 
         <!--The side panels-->
 
-        <aside class="asideleft">
-            <h2 class="asidetitle">Home</h2>
+        <aside >
+            <h2 class="asidetitle">{{ page.articlename }}</h2>
             <ul class="toc">
                 {% include toc{{page.link}}.html %}
             </ul>
