@@ -1,4 +1,8 @@
 
+:root{
+    --font:hsl(260,11%,95%);
+    --border:hsl(260,11%,40%);
+}
 @font-face {
     font-family:"Aleo";
     src:url(fonts/Aleo-Regular.otf);
@@ -15,7 +19,7 @@ body{
     background-repeat:no-repeat;
     background-size:cover;
     background-attachment:fixed;
-    color:white;
+    color:var(--font);
     word-wrap: break-word;
     font-family:"Aleo";
     box-sizing:border-box;
@@ -139,7 +143,7 @@ nav{
     margin:0;
     width:100%;
     font-size:1em;
-    border-bottom:1px solid hsl(260,11%,40%);
+    border-bottom:1px solid var(--border);
     z-index:3;
 }
 .navigationmenu{
@@ -164,7 +168,7 @@ nav{
     padding-bottom:5px;
     list-style:none;
     font-size:1em;
-    outline:1px solid hsl(260,11%,40%);
+    outline:1px solid var(--border);
 }
 .navbutton{
     position: relative;
@@ -180,7 +184,7 @@ nav{
 .navlink{
     text-decoration:none;
     display:block;
-    color:white !important;
+    color:var(--font) !important;
     width:100%;
     position: absolute;
     margin: 0;
@@ -244,7 +248,7 @@ aside{
     position:sticky;
     top:0;
     float:left;
-    outline:1px solid hsl(260,11%,40%);
+    outline:1px solid var(--border);
     z-index:2;
     overflow:scroll;
 }
@@ -255,8 +259,8 @@ aside{
 .toc{
     padding-left:15px;
     margin-bottom:180px;
-    border-top:1px solid hsl(260,11%,40%);
-    border-bottom:1px solid hsl(260,11%,40%);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
 }
 .subtoc{
     padding-left:5px;
@@ -296,6 +300,10 @@ aside{
         margin:auto;
         width:90%;
     }
+    .captionbox{
+        padding:1px;
+        border:1px double var(--font);
+    }
     .clip{
         width:120px;
         height:120px;
@@ -324,6 +332,8 @@ aside{
     }
     .captionbox{
         margin-right:2.5% !important;
+        padding:2px;
+        border:2px double var(--font);
     }
     .center{
         margin-left:2.5% !important;
@@ -357,6 +367,8 @@ aside{
     }
     .captionbox{
         margin-right:5% !important;
+        padding:3px;
+        border:3px double var(--font);
     }
     .center{
         margin-left:5% !important;
@@ -371,7 +383,6 @@ aside{
 }
 .maincolumn{
     float:left;
-    color:white;
 }
 .bigpageheader, .smallpageheader{
     text-align:center;
@@ -386,11 +397,17 @@ aside{
     padding-top:5px;
     padding-bottom:5px;
     margin-bottom:300px;
-    border-top:1px solid hsl(260,11%,40%);
-    border-bottom:1px solid hsl(260,11%,40%);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+}
+.maincontent h2::after{
+    content:'';
+    display:block;
+    background-color:var(--border);
+    height:1px;
+    width:25%;
 }
 .paragraphheader, .paragraphsubheader{
-    color:white;
     margin-top:0px;
 }
 .articlediv{
@@ -406,18 +423,12 @@ aside{
 }
 .imgwrapper{
     margin-left:5%;
-    border-left:1px solid hsl(260,11%,90%);
-}
-.captionbox .imgwrapper{
-    overflow:scroll;
-    outline:3px double hsl(260,11%,90%);
+    border-left:1px solid var(--font);
 }
 .captionbox{
     display:inline-block;
     justify-content:center;
-    border:3px double hsl(260,11%,90%);
     margin:28px;
-    padding:3px;
     font-size:0;
 }
 .right{
@@ -426,24 +437,61 @@ aside{
 }
 .center{
 }
+@media only screen and (max-width:560px){
+    .caption{
+        font-size:8px;
+    }
+    .h240 img{
+        height:100px;
+    }
+    .h180 img{
+        height:50px;
+    }
+    .h120 img{
+        height:25px;
+    }
+}
+@media only screen and (min-width:561px) and (max-width:1200px){
+    .caption{
+        font-size:11px;
+    }
+    .h240 img{
+        height:120px;
+    }
+    .h180 img{
+        height:60px;
+    }
+    .h120 img{
+        height:40px;
+    }
+}
+@media only screen and (min-width:1201px){
+    .caption{
+        font-size:14px;
+    }
+    .h240 img{
+        height:240px;
+    }
+    .h180 img{
+        height:180px;
+    }
+    .h120 img{
+        height:120px;
+    }
+}
 .caption{
-    font-size:14px;
-    display:block;
+    display: table-caption;
+    width:90%;
     margin:1px;
     margin-top:0;
     margin-bottom:5px;
 }
-
-/* Images */
-
 .articleimage, .articlevideo{
     margin:1px;
 }
-
 .clip{
     object-fit: cover;
 }
-
 /* Tables */
 
 .wrapper{
@@ -451,10 +499,10 @@ aside{
 }
 table{
     border-collapse:collapse;
-    outline:3px double hsl(260,11%,90%);
+    outline:3px double var(--font);
 }
 th{
-    border:1px solid hsl(260,11%,90%);
+    border:1px solid var(--font);
     padding-left:4px;
     padding-right:4px;
 }
@@ -466,7 +514,7 @@ footer{
     float:bottom;
     margin-bottom:0;
     display:table;
-    border-top:1px solid hsl(260,11%,40%);
+    border-top:1px solid var(--border);
     position:relative;
     z-index:4;
 }
