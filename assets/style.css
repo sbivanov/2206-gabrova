@@ -23,6 +23,7 @@ body{
     word-wrap: break-word;
     font-family:"Aleo";
     box-sizing:border-box;
+    scrollbar-color:var(--font) rgb(55,45,96);
 }
 
 /* Colors of elements */
@@ -57,8 +58,6 @@ a:link{
 a:visited{
     color:mediumpurple;
 }
-a[href='eris.html'],
-a[href='haumea.html'],
 a[href='makemake.html'],
 a[href='phobos.html'],
 a[href='deimos.html'],
@@ -73,7 +72,6 @@ a[href='oberon.html'],
 a[href='umbriel.html'],
 a[href='ariel.html'],
 a[href='proteus.html'],
-a[href='charon.html'],
 a[href='dysnomia.html'],
 a[href='gonggong.html'],
 a[href='quaoar.html'],
@@ -281,22 +279,18 @@ aside{
     .bigpageheader{
         margin-top:1em;
     }
-    .maincontent p, .maincontent ol, .maincontent ul, .maincontent h2, .maincontent h3, .maincontent h4, .maincontent table, .mapdiv{
-        margin:auto;
-        width:90%;
-        margin-top:5px;
-        margin-bottom:5px;
+    .maincontent p, .maincontent ol, .maincontent ul, .maincontent h2, .maincontent h3, .maincontent h4, .mapdiv{
+        margin:5px 5%;
     }
-    .paragraph, .readmore{
+    .maincontent table{
+        margin:auto;
+        width:95%;
+    }
+    .paragraph, .readmore, .maincontent li{
         font-size:14px;
     }
     .maincontent .captionbox{
-        margin-right:5%;
-        margin-left:5%;
-    }
-    .imgwrapper .captionbox{
-        margin-right:2.5% !important;
-        margin-left:2.5% !important;
+        margin:5vw;
     }
     .wrapper{
         margin:auto;
@@ -325,12 +319,8 @@ aside{
         margin-right:2.5%;
         margin-left:2.5%;
     }
-    .paragraph, .readmore{
+    .paragraph, .readmore, .maincontent li{
         font-size:16px;
-    }
-    .imgwrapper .captionbox{
-        margin-right:2.5% !important;
-        margin-left:2.5% !important;
     }
     .captionbox{
         margin-right:2.5% !important;
@@ -345,7 +335,7 @@ aside{
         height:180px;
     }
     table{
-        display:inline-block;
+        font-size:13px;
     }
 }
 @media only screen and (min-width:1201px){
@@ -360,12 +350,8 @@ aside{
         margin-right:5%;
         margin-left:5%;
     }
-    .paragraph, .readmore{
+    .paragraph, .readmore, .maincontent li{
         font-size:18px;
-    }
-    .imgwrapper .captionbox{
-        margin-right:2.5% !important;
-        margin-left:2.5% !important;
     }
     .captionbox{
         margin-right:5% !important;
@@ -380,7 +366,7 @@ aside{
         height:240px;
     }
     table{
-        display:inline-block;
+        font-size:16px;
     }
 }
 .maincolumn{
@@ -433,30 +419,31 @@ aside{
     margin:28px;
     font-size:0;
 }
+.imgwrapper .captionbox{
+    margin:2.5vw !important;
+}
 .right{
     float:right;
     margin-right:0px;
-}
-.center{
 }
 @media only screen and (max-width:560px){
     .caption{
         font-size:8px;
     }
     .h360 img{
-        height:150px;
+        height:180px;
     }
     .h300 img{
-        height:125px;
+        height:150px;
     }
     .h240 img{
-        height:100px;
+        height:120px;
     }
     .h180 img{
-        height:75px;
+        height:90px;
     }
     .h120 img{
-        height:50px;
+        height:60px;
     }
 }
 @media only screen and (min-width:561px) and (max-width:1200px){
@@ -519,7 +506,10 @@ aside{
 }
 table{
     border-collapse:collapse;
+    overflow: scroll;
+    max-height: 50vh;
     outline:3px double var(--font);
+    display:inline-block;
 }
 th{
     border:1px solid var(--font);
