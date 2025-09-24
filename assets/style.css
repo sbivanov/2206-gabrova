@@ -61,10 +61,6 @@ a:visited{
 a[href='makemake.html'],
 a[href='phobos.html'],
 a[href='deimos.html'],
-a[href='rhea.html'],
-a[href='dione.html'],
-a[href='tethys.html'],
-a[href='mimas.html'],
 a[href='hyperion.html'],
 a[href='phoebe.html'],
 a[href='titania.html'],
@@ -290,7 +286,10 @@ aside{
         font-size:14px;
     }
     .maincontent .captionbox{
-        margin:5vw;
+        margin: 2.5vw 5vw 2.5vw 2.5vw;
+    }
+    .center{
+        margin-left:5% !important;
     }
     .wrapper{
         margin:auto;
@@ -322,13 +321,15 @@ aside{
     .paragraph, .readmore, .maincontent li{
         font-size:16px;
     }
-    .captionbox{
+    .maincontent .captionbox{
+        margin:2.5vw;
+    }
+    .right{
         margin-right:2.5% !important;
+    }
+    .captionbox{
         padding:2px;
         border:2px double var(--font);
-    }
-    .center{
-        margin-left:2.5% !important;
     }
     .clip{
         width:180px;
@@ -353,8 +354,13 @@ aside{
     .paragraph, .readmore, .maincontent li{
         font-size:18px;
     }
-    .captionbox{
+    .maincontent .captionbox{
+        margin:2.5vw;
+    }
+    .right{
         margin-right:5% !important;
+    }
+    .captionbox{
         padding:3px;
         border:3px double var(--font);
     }
@@ -416,7 +422,6 @@ aside{
 .captionbox{
     display:inline-block;
     justify-content:center;
-    margin:28px;
     font-size:0;
 }
 .imgwrapper .captionbox{
@@ -424,66 +429,83 @@ aside{
 }
 .right{
     float:right;
-    margin-right:0px;
 }
 @media only screen and (max-width:560px){
     .caption{
         font-size:8px;
     }
-    .h360 img{
+    .h600 img, .h600 video{
+        height:300px;
+    }
+    .h360 img, .h360 video{
         height:180px;
     }
-    .h300 img{
+    .h300 img, .h300 video{
         height:150px;
     }
-    .h240 img{
+    .h240 img, .h240 video{
         height:120px;
     }
-    .h180 img{
+    .h180 img, .h180 video{
         height:90px;
     }
-    .h120 img{
+    .h120 img, .h120 video{
         height:60px;
+    }
+    .center img{
+        width:100%;
     }
 }
 @media only screen and (min-width:561px) and (max-width:1200px){
     .caption{
         font-size:11px;
     }
-    .h360 img{
+    .h600 img, .h600 video{
+        height:400px;
+    }
+    .h360 img, .h360 video{
         height:240px;
     }
-    .h300 img{
+    .h300 img, .h300 video{
         height:200px;
     }
-    .h240 img{
+    .h240 img, .h240 video{
         height:160px;
     }
-    .h180 img{
+    .h180 img, .h180 video{
         height:120px;
     }
-    .h120 img{
+    .h120 img, .h120 video{
         height:80px;
+    }
+    .center img{
+        max-width:412px;
     }
 }
 @media only screen and (min-width:1201px){
     .caption{
         font-size:14px;
     }
-    .h360 img{
+    .h600 img, .h600 video{
+        height:600px;
+    }
+    .h360 img, .h360 video{
         height:360px;
     }
-    .h300 img{
+    .h300 img, .h300 video{
         height:300px;
     }
-    .h240 img{
+    .h240 img, .h240 video{
         height:240px;
     }
-    .h180 img{
+    .h180 img, .h180 video{
         height:180px;
     }
-    .h120 img{
+    .h120 img, .h120 video{
         height:120px;
+    }
+    .center img{
+        max-width:984px;
     }
 }
 .caption{
