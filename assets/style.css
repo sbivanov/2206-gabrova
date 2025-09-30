@@ -8,7 +8,6 @@
     src:url(fonts/Aleo-Regular.otf);
     font-style:normal;
 }
-
 body{
     margin:0;
     padding:0;
@@ -58,7 +57,7 @@ a:link{
 a:visited{
     color:mediumpurple;
 }
-a[href='makemake.html'],
+a[href='satellites-of-pluto.html'],
 a[href='phobos.html'],
 a[href='deimos.html'],
 a[href='hyperion.html'],
@@ -74,12 +73,11 @@ a[href='quaoar.html'],
 a[href='sedna.html'],
 a[href='orcus.html'],
 a[href='salacia.html'],
-a[href='vesta.html'],
 a[href='pallas.html'],
 a[href='hygiea.html'],
-a[href='comet.html'],
 a[href='centaur.html'],
-a[href='trojan.html']{
+a[href='trojan.html'],
+a[href='nea.html']{
     color:lightsalmon;
 }
 .readmore{
@@ -139,21 +137,19 @@ nav{
     margin:0;
     width:100%;
     font-size:1em;
+    line-height:1em;
     border-bottom:1px solid var(--border);
     z-index:3;
 }
 .navigationmenu{
-    text-align:center;
     margin:0;
-    font-size:1em;
-    padding-left:0;
-    padding-right:0;
+    padding:0;
+    text-align:center;
 }
 .navlogo{
     display:inline-block;
     float:left;
-    margin-left:5px;
-    margin-right:10%;
+    margin:5px 10% 5px 5px;
 }
 
 /* Buttons */
@@ -163,7 +159,6 @@ nav{
     padding-top:5px;
     padding-bottom:5px;
     list-style:none;
-    font-size:1em;
     outline:1px solid var(--border);
 }
 .navbutton{
@@ -173,7 +168,7 @@ nav{
 }
 .featuredbutton{
     margin:5px;
-    position: relative;
+    position:relative;
     padding:15px 0px;
     text-align:center;
 }
@@ -182,10 +177,10 @@ nav{
     display:block;
     color:var(--font) !important;
     width:100%;
-    position: absolute;
-    margin: 0;
-    top: 50%;
-    left: 50%;
+    position:absolute;
+    margin:0;
+    top:50%;
+    left:50%;
     transform: translate(-50%, -50%);
 }
 
@@ -201,9 +196,7 @@ nav{
     display:block;
 }
 .dropbutton{
-    margin-left:-40px;
-    margin-top:1px;
-    margin-bottom:1px;
+    margin:1px 0px 1px -40px;
     height:1em;
     position:relative;
 }
@@ -250,7 +243,6 @@ aside{
 }
 .asidetitle{
     padding:.6em;
-    padding-left:5px;
 }
 .toc{
     padding-left:15px;
@@ -259,7 +251,7 @@ aside{
     border-bottom:1px solid var(--border);
 }
 .subtoc{
-    padding-left:5px;
+    padding-left:12.5px;
 }
 
 /* Main content */
@@ -271,16 +263,10 @@ aside{
     }
     .bigpageheader{
         font-size:48px;
-    }
-    .bigpageheader{
         margin-top:1em;
     }
     .maincontent p, .maincontent ol, .maincontent ul, .maincontent h2, .maincontent h3, .maincontent h4, .mapdiv{
         margin:5px 5%;
-    }
-    .maincontent table{
-        margin:auto;
-        width:95%;
     }
     .paragraph, .readmore, .maincontent li{
         font-size:14px;
@@ -304,6 +290,8 @@ aside{
         height:120px;
     }
     table{
+        margin:auto;
+        width:95%;
         font-size:10px;
     }
 }
@@ -378,18 +366,16 @@ aside{
 .maincolumn{
     float:left;
 }
-.bigpageheader, .smallpageheader{
-    text-align:center;
-}
 .bigpageheader{
     margin-bottom:0px;
+    text-align:center;
 }
 .smallpageheader{
     font-size:26px;
+    text-align:center;
 }
 .maincontent{
-    padding-top:5px;
-    padding-bottom:5px;
+    padding:5px 0px;
     margin-bottom:300px;
     border-top:1px solid var(--border);
     border-bottom:1px solid var(--border);
@@ -410,26 +396,6 @@ aside{
 
 /* Images */
 
-@media only screen and (max-width:560px){
-    .imgwrapper{
-        margin:auto;
-    }
-}
-.imgwrapper{
-    margin-left:5%;
-    border-left:1px solid var(--font);
-}
-.captionbox{
-    display:inline-block;
-    justify-content:center;
-    font-size:0;
-}
-.imgwrapper .captionbox{
-    margin:2.5vw !important;
-}
-.right{
-    float:right;
-}
 @media only screen and (max-width:560px){
     .caption{
         font-size:8px;
@@ -508,12 +474,25 @@ aside{
         max-width:984px;
     }
 }
+.imgwrapper{
+    margin-left:5%;
+    border-left:1px solid var(--font);
+}
+.captionbox{
+    display:inline-block;
+    justify-content:center;
+    font-size:0;
+}
+.imgwrapper .captionbox{
+    margin:2.5vw !important;
+}
+.right{
+    float:right;
+}
 .caption{
     display: table-caption;
     width:90%;
-    margin:1px;
-    margin-top:0;
-    margin-bottom:5px;
+    margin:0 1px 5px 1px;
 }
 .articleimage, .articlevideo{
     margin:1px;
@@ -535,8 +514,7 @@ table{
 }
 th{
     border:1px solid var(--font);
-    padding-left:4px;
-    padding-right:4px;
+    padding:1px 4px;
 }
 
 /* Footer */
