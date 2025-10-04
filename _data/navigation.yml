@@ -6,7 +6,9 @@
   link: asteroid
 - name: TNOs
   link: tno
-- name: Exoplanets
-  link: exoplanet
+- name: Comets
+  link: comet
 - name: Stars
   link: star
+- name: Exoplanets
+  link: exoplanet

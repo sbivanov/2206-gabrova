@@ -33,13 +33,13 @@ body{
 .navbutton, .featuredbutton, .navbutton:hover .dropbutton, .asidetitle, .toc, .maincontent, footer{
     background-color:hsl(260,11%,20%);
 }
-.captionbox, .firstrow{
+.captionbox, .firstrow, .cat{
     background-color:hsl(260,11%,30%);
 }
 footer{
     color:hsl(260,11%,80%);
 }
-.navbutton:hover, .navbutton:hover .dropbutton:hover, .featuredbutton:hover{
+.navbutton:hover, .navbutton:hover .dropbutton:hover, .featuredbutton:hover, .cat p{
     background-color:rgb(55,45,96);
 }
 
@@ -62,10 +62,6 @@ a[href='phobos.html'],
 a[href='deimos.html'],
 a[href='hyperion.html'],
 a[href='phoebe.html'],
-a[href='titania.html'],
-a[href='oberon.html'],
-a[href='umbriel.html'],
-a[href='ariel.html'],
 a[href='proteus.html'],
 a[href='dysnomia.html'],
 a[href='gonggong.html'],
@@ -266,10 +262,13 @@ aside{
         margin-top:1em;
     }
     .maincontent p, .maincontent ol, .maincontent ul, .maincontent h2, .maincontent h3, .maincontent h4, .mapdiv{
-        margin:5px 5%;
+        margin:10px 5%;
     }
-    .paragraph, .readmore, .maincontent li{
+    .paragraph, .readmore, .maincontent li, .cat{
         font-size:14px;
+    }
+    .cat p{
+        font-size:16px;
     }
     .maincontent .captionbox{
         margin: 2.5vw 5vw 2.5vw 2.5vw;
@@ -306,8 +305,11 @@ aside{
         margin-right:2.5%;
         margin-left:2.5%;
     }
-    .paragraph, .readmore, .maincontent li{
+    .paragraph, .readmore, .maincontent li, .cat{
         font-size:16px;
+    }
+    .cat p{
+        font-size:18px;
     }
     .maincontent .captionbox{
         margin:2.5vw;
@@ -339,8 +341,11 @@ aside{
         margin-right:5%;
         margin-left:5%;
     }
-    .paragraph, .readmore, .maincontent li{
+    .paragraph, .readmore, .maincontent li, .cat{
         font-size:18px;
+    }
+    .cat p{
+        font-size:20px;
     }
     .maincontent .captionbox{
         margin:2.5vw;
@@ -507,14 +512,41 @@ aside{
 }
 table{
     border-collapse:collapse;
-    overflow: scroll;
-    max-height: 50vh;
+    overflow:scroll;
+    max-height:50vh;
     outline:3px double var(--font);
     display:inline-block;
 }
 th{
     border:1px solid var(--font);
     padding:1px 4px;
+}
+
+/* Categories */
+
+.cat{
+    margin:2.5vw;
+    border:1px solid var(--border);
+    text-align: center;
+}
+.cat ul{
+    margin:0;
+    padding:2.5vw;
+    list-style:none;
+    display:inline-flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.cat p{
+    margin:0;
+    padding:2.5px;
+    outline:1px solid var(--border);
+}
+.cat a{
+}
+.cat li+li::before{
+    content:"·";
+    margin-left:3.5px;
 }
 
 /* Footer */
