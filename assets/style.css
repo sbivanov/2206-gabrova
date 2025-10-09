@@ -58,10 +58,10 @@ a:visited{
     color:mediumpurple;
 }
 a[href='satellites-of-pluto.html'],
-a[href='phobos.html'],
-a[href='deimos.html'],
+a[href='amalthea.html'],
 a[href='hyperion.html'],
 a[href='phoebe.html'],
+a[href='puck.html'],
 a[href='proteus.html'],
 a[href='dysnomia.html'],
 a[href='gonggong.html'],
@@ -71,9 +71,12 @@ a[href='orcus.html'],
 a[href='salacia.html'],
 a[href='pallas.html'],
 a[href='hygiea.html'],
+a[href='halley.html'],
 a[href='centaur.html'],
 a[href='trojan.html'],
-a[href='nea.html']{
+a[href='nea.html'],
+a[href='nebula.html'],
+a[href='black-hole.html']{
     color:lightsalmon;
 }
 .readmore{
@@ -264,10 +267,10 @@ aside{
     .maincontent p, .maincontent ol, .maincontent ul, .maincontent h2, .maincontent h3, .maincontent h4, .mapdiv{
         margin:10px 5%;
     }
-    .paragraph, .readmore, .maincontent li, .cat{
+    .paragraph, .readmore, .maincontent li, .cat, .cath{
         font-size:14px;
     }
-    .cat p{
+    .cattitle{
         font-size:16px;
     }
     .maincontent .captionbox{
@@ -305,10 +308,10 @@ aside{
         margin-right:2.5%;
         margin-left:2.5%;
     }
-    .paragraph, .readmore, .maincontent li, .cat{
+    .paragraph, .readmore, .maincontent li, .cat, .cath{
         font-size:16px;
     }
-    .cat p{
+    .cattitle{
         font-size:18px;
     }
     .maincontent .captionbox{
@@ -341,10 +344,10 @@ aside{
         margin-right:5%;
         margin-left:5%;
     }
-    .paragraph, .readmore, .maincontent li, .cat{
+    .paragraph, .readmore, .maincontent li, .cat, .cath{
         font-size:18px;
     }
-    .cat p{
+    .cattitle{
         font-size:20px;
     }
     .maincontent .captionbox{
@@ -525,9 +528,10 @@ th{
 /* Categories */
 
 .cat{
+    display:grid;
+    grid-template-columns:auto auto auto auto auto auto auto auto auto auto;
     margin:2.5vw;
     border:1px solid var(--border);
-    text-align: center;
 }
 .cat ul{
     margin:0;
@@ -541,12 +545,35 @@ th{
     margin:0;
     padding:2.5px;
     outline:1px solid var(--border);
-}
-.cat a{
+    text-align:center;
 }
 .cat li+li::before{
     content:"·";
     margin-left:3.5px;
+}
+.cattitle, .catcenter{
+    grid-column-start:1;
+    grid-column-end:11;
+    text-align:center;
+}
+.subcat{
+    display:grid;
+    grid-template-columns:auto auto auto auto auto auto auto auto auto;
+    grid-column-start:2;
+    grid-column-end:11;
+}
+.subsubcat{
+    grid-column-start:2;
+    grid-column-end:10;
+}
+.subcat ul{
+    padding:0;
+    justify-content:left;
+}
+.subcat ul:before{
+    content:"";
+    width:0.5vw;
+    display:inline;
 }
 
 /* Footer */
