@@ -48,6 +48,13 @@ footer{
 a{
     text-decoration: none;
 }
+.current{
+    cursor:default;
+    color:var(--font) !important;
+    text-decoration:none !important;
+    pointer-events:none;
+    font-weight:bold;
+}
 a:hover{
     text-decoration: underline;
 }
@@ -57,7 +64,6 @@ a:link{
 a:visited{
     color:mediumpurple;
 }
-a[href='satellites-of-pluto.html'],
 a[href='amalthea.html'],
 a[href='hyperion.html'],
 a[href='phoebe.html'],
@@ -72,7 +78,6 @@ a[href='salacia.html'],
 a[href='pallas.html'],
 a[href='hygiea.html'],
 a[href='halley.html'],
-a[href='centaur.html'],
 a[href='trojan.html'],
 a[href='nea.html'],
 a[href='nebula.html'],
@@ -93,8 +98,14 @@ a[href='black-hole.html']{
     .navbutton, .dropbutton{
         width:80px;
     }    
-    .navlink{
+    .navlogo img{
+        height:28px;
+    }
+    .navlink, .navlogo p{
         font-size:12px;
+    }
+    .navlogo p{
+        left:48px;
     }
     .dropdown{
         top:2em;
@@ -108,8 +119,14 @@ a[href='black-hole.html']{
     .navbutton, .dropbutton{
         width:100px;
     }    
-    .navlink{
+    .navlogo img{
+        height:36px;
+    }
+    .navlink, .navlogo p{
         font-size:16px;
+    }
+    .navlogo p{
+        left:56px;
     }
     .dropdown{
         top:2.5em;
@@ -123,8 +140,14 @@ a[href='black-hole.html']{
     .navbutton, .dropbutton{
         width:250px;
     }    
-    .navlink{
+    .navlogo img{
+        height:44px;
+    }
+    .navlink, .navlogo p{
         font-size:20px;
+    }
+    .navlogo p{
+        left:64px;
     }
     .dropdown{
         top:3em;
@@ -135,7 +158,6 @@ nav{
     top:0;
     margin:0;
     width:100%;
-    font-size:1em;
     line-height:1em;
     border-bottom:1px solid var(--border);
     z-index:3;
@@ -146,9 +168,14 @@ nav{
     text-align:center;
 }
 .navlogo{
-    display:inline-block;
     float:left;
-    margin:5px 10% 5px 5px;
+    padding:1px 5px;
+}
+.navlogo p{
+    position:absolute;
+    margin:0;
+    top:33%;
+    font-weight:1000;
 }
 
 /* Buttons */
@@ -172,7 +199,6 @@ nav{
     text-align:center;
 }
 .navlink{
-    text-decoration:none;
     display:block;
     color:var(--font) !important;
     width:100%;
@@ -383,7 +409,7 @@ aside{
     text-align:center;
 }
 .maincontent{
-    padding:5px 0px;
+    padding:5px 0 10px 0;
     margin-bottom:300px;
     border-top:1px solid var(--border);
     border-bottom:1px solid var(--border);
@@ -528,9 +554,8 @@ th{
 /* Categories */
 
 .cat{
-    display:grid;
     grid-template-columns:auto auto auto auto auto auto auto auto auto auto;
-    margin:2.5vw;
+    margin:auto 2.5vw;
     border:1px solid var(--border);
 }
 .cat ul{
@@ -551,13 +576,18 @@ th{
     content:"·";
     margin-left:3.5px;
 }
+.cath, .subcat{
+    display:none;
+}
+.cat, .cat:hover .cath, .cat:hover .subcat{
+    display:grid;
+}
 .cattitle, .catcenter{
     grid-column-start:1;
     grid-column-end:11;
     text-align:center;
 }
 .subcat{
-    display:grid;
     grid-template-columns:auto auto auto auto auto auto auto auto auto;
     grid-column-start:2;
     grid-column-end:11;
