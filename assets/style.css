@@ -65,14 +65,9 @@ a:visited{
     color:mediumpurple;
 }
 a[href='amalthea.html'],
-a[href='hyperion.html'],
-a[href='phoebe.html'],
 a[href='puck.html'],
 a[href='proteus.html'],
 a[href='dysnomia.html'],
-a[href='gonggong.html'],
-a[href='quaoar.html'],
-a[href='sedna.html'],
 a[href='orcus.html'],
 a[href='salacia.html'],
 a[href='pallas.html'],
@@ -81,7 +76,8 @@ a[href='halley.html'],
 a[href='trojan.html'],
 a[href='nea.html'],
 a[href='nebula.html'],
-a[href='black-hole.html']{
+a[href='black-hole.html'],
+a[href='constellation.html']{
     color:lightsalmon;
 }
 .readmore{
